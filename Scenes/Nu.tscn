@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://djjcd3wd1gumh"]
+
+[ext_resource type="Script" path="res://Scripts/Nu.gd" id="1_3y70s"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_gjj61"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xdfn"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0.701961, 0.145098, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1jjyp"]
+
+[node name="Nu" type="MeshInstance3D"]
+mesh = SubResource("SphereMesh_gjj61")
+surface_material_override/0 = SubResource("StandardMaterial3D_1xdfn")
+script = ExtResource("1_3y70s")
+
+[node name="Area3D" type="Area3D" parent="." groups=["Pheromone"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_1jjyp")

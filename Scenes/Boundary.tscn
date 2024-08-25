@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dope4rkuitkqf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ufmm"]
+size = Vector3(4000, 4000, 1)
+
+[node name="Boundary" type="Area3D" groups=["Boundary"]]
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3ufmm")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b10h286usa0p1"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_ve35h"]
+[ext_resource type="PackedScene" uid="uid://bp8udhhpm1jiy" path="res://Scenes/observer.tscn" id="2_etjc8"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_ve35h")
+
+[node name="Observer" parent="." instance=ExtResource("2_etjc8")]
